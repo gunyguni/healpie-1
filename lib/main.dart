@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
       title: "healpie",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("level1"),
+          title: Text("level2"),
         ),
       ),
     );
