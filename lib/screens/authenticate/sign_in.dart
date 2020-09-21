@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healpie_2/auth/auth.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -6,6 +7,7 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  final AuthService _auth = AuthService();
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
   Widget build(BuildContext context) {
@@ -59,7 +61,15 @@ class _SignInState extends State<SignIn> {
                 ),
                 RaisedButton(
                   child: Text('Login'),
-                  onPressed: () {},
+                  onPressed: () async {
+                    dynamic result = await _auth.signInAnonymous();
+                    if (result == null) {
+                      print('Error signing in');
+                    } else {
+                      print('signed in');
+                      print(result.uid);
+                    }
+                  },
                 ),
               ],
             ),
