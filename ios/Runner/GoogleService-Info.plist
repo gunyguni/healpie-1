@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1075053231662-mpeo8ul1gh03ni1dtjlba9nsf61vtvah.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1075053231662-mpeo8ul1gh03ni1dtjlba9nsf61vtvah</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1075053231662-l51m4738ke1l1f18et72sh4sej8svhdj.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCkd5uV7AAiIHT8HBCM7dXjAgGtyop4A3U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1075053231662</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.healpie2</string>
+	<key>PROJECT_ID</key>
+	<string>helpy-e9ff9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>helpy-e9ff9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1075053231662:ios:4ba104dba8bc852bf6a9bf</string>
+	<key>DATABASE_URL</key>
+	<string>https://helpy-e9ff9.firebaseio.com</string>
+</dict>
+</plist>
