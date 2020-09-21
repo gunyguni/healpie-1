@@ -6,18 +6,64 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  @override
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).accentColor,
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor,
-        elevation: 0,
-        title: Text("앱바 지우려면 지워"),
-      ),
-      body: Container(
-        child: Center(
-          child: Text("화이팅 여기 채워"),
+      body: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 24.0),
+          children: <Widget>[
+            SizedBox(height: 60.0),
+            Column(
+              children: <Widget>[
+                Image.asset('assets/workout.jpg'),
+                SizedBox(
+                  height: 16.0,
+                ),
+                Text(
+                  'healpy',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 60.0,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                filled: true,
+                labelText: 'Username',
+              ),
+            ),
+            SizedBox(
+              height: 12.0,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                filled: true,
+                labelText: 'Password',
+              ),
+              obscureText: true,
+            ),
+            ButtonBar(
+              children: <Widget>[
+                FlatButton(
+                  child: Text('CLEAR'),
+                  onPressed: () {
+                    _usernameController.clear();
+                    _passwordController.clear();
+                  },
+                ),
+                RaisedButton(
+                  child: Text('Login'),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
