@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healpie_2/screens/wrapper.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,11 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "helpy",
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("level2"),
-        ),
-      ),
+      home: Wrapper(),
     );
   }
 }
