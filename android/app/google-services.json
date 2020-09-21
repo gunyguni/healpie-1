@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1075053231662",
+    "firebase_url": "https://helpy-e9ff9.firebaseio.com",
+    "project_id": "helpy-e9ff9",
+    "storage_bucket": "helpy-e9ff9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075053231662:android:99a6755d2cb3ef00f6a9bf",
+        "android_client_info": {
+          "package_name": "com.guniguny.helpy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075053231662-l51m4738ke1l1f18et72sh4sej8svhdj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.guniguny.helpy",
+            "certificate_hash": "04f6fd65abefec1c6ea571e4fc83ad6086d789c0"
+          }
+        },
+        {
+          "client_id": "1075053231662-m8kjvho843hrrj6apd538321vv6g8ubb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6q9O3XgdEtHol_jmppyNofcR8v3SIlY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075053231662-m8kjvho843hrrj6apd538321vv6g8ubb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
