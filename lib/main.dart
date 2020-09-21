@@ -1,7 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:healpie_2/screens/wrapper.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -17,7 +22,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.cyan[600],
 
         // the default font family are DEFINED HERE
-        fontFamily: 'Georgia',
+        //fontFamily: 'Georgia',
 
         // Define the default TextTheme. Use this to specify the default
         // text styling for headlines, titles, bodies of text, and more.
