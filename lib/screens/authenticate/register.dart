@@ -1,34 +1,55 @@
 import 'package:flutter/material.dart';
 import 'package:healpie_2/auth/auth.dart';
-import 'package:healpie_2/screens/authenticate/register.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
+// register screen with slide up animation
+class _RegisterState extends State<Register>
+    with SingleTickerProviderStateMixin {
   final AuthService _auth = AuthService();
-  final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
+
+  //animation controller instance to create animation
+  AnimationController _animationController;
+
+  void initState() {
+    _animationController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 150));
+    _animationController.forward();
+    super.initState();
+  }
+
+  //deallocating animation resources after use
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
           children: <Widget>[
+            FadeTransition(
+              opacity: _animationController,
+            ),
             SizedBox(height: 60.0),
             Column(
               children: <Widget>[
-                Image.asset('assets/workout.jpg'),
-                SizedBox(
-                  height: 16.0,
-                ),
                 Text(
-                  'H E A L P Y',
+                  '회원 가입',
                   style: TextStyle(
                     fontSize: 20.0,
                   ),
+                ),
+                Image.asset('assets/workout.jpg'),
+                SizedBox(
+                  height: 16.0,
                 ),
               ],
             ),
@@ -36,7 +57,6 @@ class _SignInState extends State<SignIn> {
               height: 60.0,
             ),
             TextField(
-              controller: _usernameController,
               decoration: InputDecoration(
                 filled: true,
                 labelText: 'Username',
@@ -46,7 +66,6 @@ class _SignInState extends State<SignIn> {
               height: 12.0,
             ),
             TextField(
-              controller: _passwordController,
               decoration: InputDecoration(
                 filled: true,
                 labelText: 'Password',
@@ -57,28 +76,15 @@ class _SignInState extends State<SignIn> {
               alignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 FlatButton(
-                  child: Text('회원가입'),
+                  child: Text('취소'),
                   onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) {
-                        return Register();
-                      }),
-                    );
+                    Navigator.pop(context);
                   },
                 ),
                 RaisedButton(
                   color: Colors.amber[100],
-                  child: Text('Login'),
-                  onPressed: () async {
-                    dynamic result = await _auth.signInAnonymous();
-                    if (result == null) {
-                      print('Error signing in');
-                      _passwordController.clear();
-                    } else {
-                      print('signed in');
-                      print(result.uid);
-                    }
-                  },
+                  child: Text('회원 가입'),
+                  onPressed: () {},
                 ),
               ],
             ),
